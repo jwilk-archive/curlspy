@@ -1,0 +1,32 @@
+#!/bin/sh
+set -e 
+tmp=$(getopt -o h --long fd:,help -n curlspy -- "$@") || exit 1
+eval set -- "$tmp"
+
+while true
+do
+    case "$1" in
+        -h|--help)
+            printf 'Usage: curlspy [--fd N] COMMAND ...\n' >&2
+            exit 0
+            ;;
+        --fd)
+            export CURLSPY_FD="$2"
+            shift 2
+            ;;
+        --)
+            shift
+            break
+            ;;
+        *)
+            printf 'Internal error' >&2
+            exit 1
+    esac   
+done
+
+library="${0%/*}/libcurlspy.so"
+stat -- "$library" > /dev/null
+export LD_PRELOAD="$library"
+exec "$@"
+
+# vim:ts=4 sw=4 et
