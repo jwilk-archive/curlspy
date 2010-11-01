@@ -76,9 +76,10 @@ CURLcode curl_easy_setopt(CURL *handle, CURLoption option, ...)
         va_copy(args_copy, args);
         parameter = va_arg(args_copy, const char *);
         rc = write(fd, parameter, strlen(parameter));
+        if (rc >= 0)
+            rc = write(fd, "\n", 1);
         if (rc < 0)
             perror("curlspy");
-        rc = write(fd, "\n", 1);
         va_end(args_copy);
     }
     rc = Curl_setopt(handle, option, args);
