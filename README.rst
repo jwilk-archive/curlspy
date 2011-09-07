@@ -1,5 +1,3 @@
-.. -*- restructuredtext -*-
-
 *curlspy* uses LD_PRELOAD tricks to discover which URLs are being accessed
 by applications linked to libcurl_, e.g. Gnash_.
 
