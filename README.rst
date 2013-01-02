@@ -1,5 +1,5 @@
 *curlspy* uses LD_PRELOAD tricks to discover which URLs are being accessed
-by applications linked to libcurl_, e.g. Gnash_.
+by applications linked to libcurl_, such as Gnash_.
 
 .. _libcurl:
    http://curl.haxx.se/ 
