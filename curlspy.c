@@ -87,4 +87,4 @@ CURLcode curl_easy_setopt(CURL *handle, CURLoption option, ...)
     return rc;
 }
 
-/* vim:set ts=4 sw=4 et:*/
+/* vim:set ts=4 sts=4 sw=4 et:*/

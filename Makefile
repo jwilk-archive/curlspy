@@ -11,4 +11,4 @@ clean:
 lib%.so: %.c
 	$(CC) $(CFLAGS) -shared -fPIC -ldl $(<) -o $(@)
 
-# vim:ts=4 sw=4 noet
+# vim:ts=4 sts=4 sw=4 noet

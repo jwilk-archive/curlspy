@@ -7,4 +7,4 @@ by applications linked to libcurl_, such as Gnash_.
 .. _Gnash:
    https://www.gnu.org/software/gnash/
 
-.. vim:ts=3 sw=3 et ft=rst
+.. vim:ts=3 sts=3 sw=3 et ft=rst
