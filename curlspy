@@ -1,5 +1,5 @@
 #!/bin/sh
-set -e 
+set -e
 tmp=$(getopt -o h --long fd:,help -n curlspy -- "$@") || exit 1
 eval set -- "$tmp"
 
@@ -21,7 +21,7 @@ do
         *)
             printf 'Internal error' >&2
             exit 1
-    esac   
+    esac
 done
 
 library="${0%/*}/libcurlspy.so"
